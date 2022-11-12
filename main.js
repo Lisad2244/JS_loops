@@ -26,7 +26,7 @@ let user = [
   {
     firstName: "john",
     lastName: "Barnes",
-    birthDate: "march 5, 1946",
+    birthDate: "march 5, 2001",
     gender: "male",
   },
 ];
@@ -56,4 +56,23 @@ const male = user.filter((user) => {
   return user.gender === 'male'
 });
 
-console.log(male)
+console.log(male,"male")
+
+const ninety = user.filter(user=> {
+  if (user.birthDate >= 1990) {return true;}
+});
+
+console.log(ninety)
+
+
+
+
+
+
+
+// const year = user.filter(user => {
+//   const ageInSeconds = new Date().getTime() - new Date(user.birthday).getTime();
+//   return ageInSeconds < 30 * 365 * 86400 * 1000;
+// })
+
+// console.log(year);
