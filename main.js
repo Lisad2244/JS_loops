@@ -8,35 +8,35 @@ do {
 
 // console.log( result);
 
-const user = [
+let user = [
   {
-    firstName1: "Jane",
+    firstName: "Jane",
     lastName: "Doe",
     birthDate: "Jan 5, 1925",
     gender: "female",
   },
 
   {
-    firstName2: "mary",
+    firstName: "mary",
     lastName: "smith",
     birthDate: "feb 5, 1935",
     gender: "female",
   },
 
   {
-    firstName3: "john",
+    firstName: "john",
     lastName: "Barnes",
     birthDate: "march 5, 1946",
     gender: "male",
   },
 ];
 //.keys()
-// console.log(Object.keys(user));
+console.log(Object.keys(user));
 
 //.entries()
-// for (const [key, value] of Object.entries(user)) {
-//     console.log(`${key}: ${value}`);
-//   }
+for (const [key, value] of Object.entries(user)) {
+    console.log(`${key}: ${value}`);
+  }
 
 for (const element of user) {
   console.log(element.birthDate);
@@ -46,3 +46,14 @@ for (const element of user) {
     console.log("The number is odd");
   }
 }
+
+let arrayOfPersons = user.map(function(user) {
+return user.firstName + " " + user.lastName;
+})
+console.log('****', arrayOfPersons)
+
+const male = user.filter((user) => {
+  return user.gender === 'male'
+});
+
+console.log(male)
